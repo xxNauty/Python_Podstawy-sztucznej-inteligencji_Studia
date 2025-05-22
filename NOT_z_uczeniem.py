@@ -29,44 +29,44 @@ class perceptronProsty(object):
 
 
 
-OR_z_uczeniem = perceptronProsty()
+NOT_z_uczeniem = perceptronProsty()
 
-OR_z_uczeniem.ustaw_prog(0.5)
-OR_z_uczeniem.ustaw_wagi([0.3, -0.5, 0.2])
+NOT_z_uczeniem.ustaw_prog(0.5)
+NOT_z_uczeniem.ustaw_wagi([0, 0])
 
-X = [[0, 0], [0, 1], [1, 0], [1, 1]]
-D = [0, 1, 1, 1]
+X = [[0], [1]]
+D = [1, 0]
 
 #------------------------------------------------
 
 for Xi in X:
-    print('X=', Xi, 'Y=', OR_z_uczeniem.odpowiedz(Xi))
+    print('X=', Xi, 'Y=', NOT_z_uczeniem.odpowiedz(Xi))
 
-print(OR_z_uczeniem.W)
-
-#------------------------------------------------
-
-OR_z_uczeniem.epoka_uczenia(X, D)
-
-for Xi in X:
-    print('X=', Xi, 'Y=', OR_z_uczeniem.odpowiedz(Xi))
-
-print(OR_z_uczeniem.W)
+print(NOT_z_uczeniem.W)
 
 #------------------------------------------------
 
-OR_z_uczeniem.epoka_uczenia(X, D)
+NOT_z_uczeniem.epoka_uczenia(X, D)
 
 for Xi in X:
-    print('X=', Xi, 'Y=', OR_z_uczeniem.odpowiedz(Xi))
+    print('X=', Xi, 'Y=', NOT_z_uczeniem.odpowiedz(Xi))
 
-print(OR_z_uczeniem.W)
+print(NOT_z_uczeniem.W)
 
 #------------------------------------------------
 
-OR_z_uczeniem.epoka_uczenia(X, D)
+NOT_z_uczeniem.epoka_uczenia(X, D)
 
 for Xi in X:
-    print('X=', Xi, 'Y=', OR_z_uczeniem.odpowiedz(Xi))
+    print('X=', Xi, 'Y=', NOT_z_uczeniem.odpowiedz(Xi))
 
-print(OR_z_uczeniem.W)
+print(NOT_z_uczeniem.W)
+
+#------------------------------------------------
+
+NOT_z_uczeniem.epoka_uczenia(X, D)
+
+for Xi in X:
+    print('X=', Xi, 'Y=', NOT_z_uczeniem.odpowiedz(Xi))
+
+print(NOT_z_uczeniem.W)
